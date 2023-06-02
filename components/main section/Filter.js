@@ -1,7 +1,7 @@
 import classes from './Filter.module.css';
-import IconSearch from '../ICONS/IconSearch';
 import { useColorContext } from '../../store/color-context';
 import { useDataContext } from '../../store/data-context';
+import { AiOutlineSearch } from 'react-icons/ai';
 
 const Filter = () => {
   const colorCtx = useColorContext();
@@ -17,7 +17,7 @@ const Filter = () => {
   return (
     <div className={classes.main}>
       <form className={searchContainerClasses}>
-        <IconSearch />
+        <AiOutlineSearch className={classes['icon-search']} />
         <input
           className={classes.input}
           placeholder="Search for a country..."

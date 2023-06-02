@@ -35,6 +35,10 @@
   /* color: inherit; */
 }
 
+.icon-moon {
+  font-size: 2rem;
+}
+
 @media (max-width: 500px) {
   .header {
     padding: 2rem 5%;

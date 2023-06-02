@@ -35,6 +35,10 @@
   outline: none;
 }
 
+.icon-search {
+  font-size: 2rem;
+}
+
 .select-container {
   padding: 2rem 2rem;
   background-color: hsl(0, 0%, 100%);

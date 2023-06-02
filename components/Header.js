@@ -1,9 +1,9 @@
 import classes from './Header.module.css';
-import IconMoon from './ICONS/IconMoon';
 import { useColorContext } from '../store/color-context';
 import Link from 'next/link';
+import { MdOutlineDarkMode, MdArrowBack } from 'react-icons/md';
 
-const Header = (props) => {
+const Header = () => {
   const colorContext = useColorContext();
 
   const headerClasses = colorContext.theme
@@ -19,8 +19,9 @@ const Header = (props) => {
         className={classes['switch-container']}
         onClick={colorContext.themeChangeHandler}
       >
-        <IconMoon />
-        <p className={classes.text}>Dark Mode</p>
+        <MdOutlineDarkMode className={classes['icon-moon']} />
+        {colorContext.theme && <p className={classes.text}>Dark Mode</p>}
+        {!colorContext.theme && <p className={classes.text}>Light Mode</p>}
       </div>
     </div>
   );

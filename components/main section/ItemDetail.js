@@ -1,9 +1,9 @@
 import classes from './ItemDetail.module.css';
 import Button from '../UI/Button';
-import IconArrow from '../icons/IconArrow';
 import Image from 'next/image';
 import { useColorContext } from '../../store/color-context';
 import MainSection from './MainSection';
+import { MdArrowBack } from 'react-icons/md';
 
 const ItemDetail = (props) => {
   const {
@@ -44,7 +44,7 @@ const ItemDetail = (props) => {
   return (
     <MainSection>
       <Button link="/" className={classes['back-btn']}>
-        <IconArrow />
+        <MdArrowBack className={classes['icon-arrow']} />
         Back
       </Button>
 
