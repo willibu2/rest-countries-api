@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  max-width: 40rem;
+  margin: 20vh auto;
+  align-items: center;
+  gap: 2rem;
+}
+
+.text {
+  font-size: 2rem;
+  color: red;
+}

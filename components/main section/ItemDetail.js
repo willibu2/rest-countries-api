@@ -3,7 +3,7 @@ import Button from '../UI/Button';
 import Image from 'next/image';
 import { useColorContext } from '../../store/color-context';
 import MainSection from './MainSection';
-import { MdArrowBack } from 'react-icons/md';
+import BackButton from '../UI/BackButton';
 
 const ItemDetail = (props) => {
   const {
@@ -43,11 +43,7 @@ const ItemDetail = (props) => {
 
   return (
     <MainSection>
-      <Button link="/" className={classes['back-btn']}>
-        <MdArrowBack className={classes['icon-arrow']} />
-        Back
-      </Button>
-
+      <BackButton />
       <div className={mainClasses}>
         <Image
           className={classes.img}

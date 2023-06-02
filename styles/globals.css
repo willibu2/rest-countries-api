@@ -5,3 +5,11 @@
   font-size: 62.5%;
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.global-text {
+  font-size: 2rem;
+  max-width: 20rem;
+  color: red;
+  font-weight: bold;
+  margin: 20vh auto;
+}

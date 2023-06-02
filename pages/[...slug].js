@@ -1,30 +1,26 @@
 import { useRouter } from 'next/router';
 import ItemDetail from '../components/main section/ItemDetail';
 import { useDataContext } from '../store/data-context';
-import { useEffect, useState } from 'react';
+import BackButton from '../components/UI/BackButton';
+import CountryNotFound from '../components/main section/CountryNotFound';
 
-const Slug = (props) => {
+const Slug = () => {
   const dataCtx = useDataContext();
   const router = useRouter();
 
   const country = router.query.slug;
 
-  // console.log(country);
-
-  // const [countryData, setCountryData] = useState();
-
   if (!country) {
-    return <p>LOADING</p>;
+    return <p className="global-text">LOADING...</p>;
   }
 
-  const data = dataCtx.getSpecificCountry(country[0]);
-  const countryData = data[0];
+  const countryData = dataCtx.getSpecificCountry(country[0]);
 
-  // console.log(countryData);
+  if (!countryData) {
+    return <CountryNotFound />;
+  }
 
   const bordersData = countryData.borders;
-
-  // console.log(bordersData);
 
   const borders = dataCtx.getBorderCountries(bordersData);
   const capital = countryData.capital[0];

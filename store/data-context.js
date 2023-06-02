@@ -144,7 +144,7 @@ export const DataContextProvider = (props) => {
       return country.name.common === countryName;
     });
 
-    return countryData;
+    return countryData[0];
   };
 
   const getBorderCountries = (inputCountriesArray) => {
