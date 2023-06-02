@@ -18,7 +18,7 @@ const CountryNotFound = () => {
   return (
     <div className={classes.main}>
       <BackButton />
-      <p className={classes.text}>That country does not exist</p>
+      <p className={classes.text}>That country does not exist.</p>
     </div>
   );
 };
