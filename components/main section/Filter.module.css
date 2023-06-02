@@ -1,0 +1,78 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5rem;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1rem 2rem;
+  padding-right: 10rem;
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.search-container-dark {
+  background-color: hsl(209, 23%, 22%);
+  color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.02) 0px 7px 29px 0px;
+}
+
+.input {
+  font-size: 1.6rem;
+  border: none;
+  color: hsl(0, 0%, 52%);
+  padding: 1rem;
+  background-color: inherit;
+  color: inherit;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.select-container {
+  padding: 2rem 2rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.select-container-dark {
+  background-color: hsl(209, 23%, 22%);
+  color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.02) 0px 7px 29px 0px;
+}
+
+.select {
+  font-size: 1.6rem;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  font-weight: 600;
+}
+
+.select option {
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+.select:focus {
+  outline: none;
+}
+
+@media (max-width: 600px) {
+  .main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .search-container {
+    padding-right: 4rem;
+  }
+}
