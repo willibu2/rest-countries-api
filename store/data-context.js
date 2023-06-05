@@ -126,7 +126,9 @@ export const DataContextProvider = (props) => {
   }, []);
 
   const searchCountryHandler = (event) => {
-    dispatchCountriesAction({ type: 'SEARCH', value: event.target.value });
+    const value = event.target.value.toLowerCase();
+
+    dispatchCountriesAction({ type: 'SEARCH', value: value });
   };
 
   const selectContinentHandler = (event) => {
